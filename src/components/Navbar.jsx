@@ -5,7 +5,6 @@ import {
   FaGithub,
   FaLinkedin,
 } from 'react-icons/fa';
-import Logo from '../assets/logo.png';
 import { Link } from 'react-scroll';
 
 const Navbar = () => {
@@ -13,11 +12,8 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
-      <div>
-        <img src={Logo} alt='Logo' style={{ width: '50px' }} />
-      </div>
-
+    <div className='fixed w-full h-[80px] flex justify-end items-center px-4 bg-[#fefae0] text-blue-900'>
+      
       {/* menu */}
       <ul className='hidden md:flex'>
         <li>
@@ -57,7 +53,7 @@ const Navbar = () => {
         className={
           !nav
             ? 'hidden'
-            : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
+            : 'absolute top-0 left-0 w-full h-screen bg-[#fefae0] flex flex-col justify-center items-center'
         }
       >
         <li className='py-6 text-4xl'>
@@ -94,17 +90,17 @@ const Navbar = () => {
       {/* Social icons */}
       <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
         <ul>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#fefae0]'>
             <a
-              className='flex justify-between items-center w-full text-gray-300'
+              className='flex justify-between items-center w-full text-[#0A66C2]'
               href="https://www.linkedin.com/in/deepikasathianarayanan"
             >
               Linkedin <FaLinkedin size={30} />
             </a>
           </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#fefae0]'>
             <a
-              className='flex justify-between items-center w-full text-gray-300'
+              className='flex justify-between items-center w-full text-[#333]'
               href="https://github.com/Deepika2605"
             >
               Github <FaGithub size={30} />
